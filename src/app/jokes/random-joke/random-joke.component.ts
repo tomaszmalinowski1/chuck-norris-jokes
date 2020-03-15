@@ -34,7 +34,7 @@ export class RandomJokeComponent implements OnInit {
       .pipe(
         repeatWhen(joke => joke),
         map(joke => {
-          if (JSON.stringify(this.joke) === JSON.stringify(joke)) {
+          if (this.joke.id === joke.id) {
             throw new Error();
           }
 
