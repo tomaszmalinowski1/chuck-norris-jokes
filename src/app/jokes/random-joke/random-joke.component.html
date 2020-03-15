@@ -1,0 +1,11 @@
+<div class="joke-container">
+  <div class="back-button">
+    <img (click)="onBackClick()" src="../../../assets/back_button.svg" />
+  </div>
+  <div class="logo">
+    <img [src]="joke.icon_url" />
+  </div>
+
+  <div class="joke-text">{{ joke.value }}</div>
+  <button (click)="onNextJokeClick()">Another one</button>
+</div>

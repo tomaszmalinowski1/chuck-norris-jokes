@@ -1,0 +1,24 @@
+@import '../../common_styles/variables';
+@import '../../common_styles/mixins';
+@import '../../common_styles/general-classes';
+
+.container {
+  @include flex-item-position(flex, column, center, center);
+  flex-direction: column;
+
+  @include container-border(500px);
+  .categories-list-header {
+    font-size: 3rem;
+  }
+
+  .vertical-categories {
+    @include flex-item-position(flex, column, center, center);
+    width: 100%;
+
+    button {
+      @extend .basic-button;
+      width: 100%;
+      font-size: 1.2rem;
+    }
+  }
+}

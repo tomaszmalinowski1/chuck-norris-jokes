@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="categories-list-header">Chuck Norris Jokes Generator</div>
+
+  <div class="vertical-categories">
+    <button
+      (click)="onButtonClick(category)"
+      *ngFor="let category of categories$ | async"
+    >
+      {{ category }}
+    </button>
+  </div>
+</div>
