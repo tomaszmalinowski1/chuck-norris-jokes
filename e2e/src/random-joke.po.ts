@@ -37,25 +37,4 @@ export class RandomJokePage {
       .all(by.tagName('button'))
       .count();
   }
-
-  //   getHeaderText() {
-  //     return element(
-  //       by.css(`${this.componentName} ${this.categoryListHeader}`)
-  //     ).getText();
-  //   }
-
-  //   getCategoryList() {
-  //     return element
-  //       .all(by.css(`${this.componentName} ${this.verticalCategories}`))
-  //       .all(by.tagName('button'))
-  //       .getText();
-  //   }
-
-  //   redirectToCategory(category: string) {
-  //     return element(by.buttonText(category));
-  //     //   .all(by.buttonText(category))
-  //     //   .first();
-  //   }
-
-  //   redirectToJoke() {}
 }

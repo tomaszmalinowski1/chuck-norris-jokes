@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable, Subject, BehaviorSubject } from 'rxjs';
+import { Observable, BehaviorSubject } from 'rxjs';
 import { CHUCK_NORRIS_API } from './services-consts';
 import { map, catchError, tap } from 'rxjs/operators';
 

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CategoryListService } from 'src/app/services/category-list.service';
 import { BehaviorSubject } from 'rxjs';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-category-list',
@@ -13,14 +13,17 @@ export class CategoryListComponent implements OnInit {
 
   constructor(
     private categoryListService: CategoryListService,
+    private route: ActivatedRoute,
     private router: Router
   ) {
     this.categories$ = this.categoryListService.categories$;
+
+    this.route.data.subscribe(({ categories }) => {
+      this.categories$.next(categories);
+    });
   }
 
-  ngOnInit() {
-    this.categoryListService.getCategories().subscribe(() => {});
-  }
+  ngOnInit() {}
 
   onButtonClick(category: string) {
     this.router.navigateByUrl(`/jokes/${category.toLowerCase()}`);

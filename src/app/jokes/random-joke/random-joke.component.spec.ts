@@ -72,10 +72,4 @@ describe('RandomJokeComponent', () => {
     component.onNextJokeClick();
     expect(spy).toHaveBeenCalled();
   });
-
-  it('should have onNextJokeClick', () => {
-    spy = spyOn(component, 'onNextJokeClick');
-    component.onNextJokeClick();
-    expect(spy).toHaveBeenCalled();
-  });
 });

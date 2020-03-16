@@ -12,15 +12,15 @@ describe('CategoryListComponent', () => {
     page.navigateTo();
   });
 
-  xit('should contains header and category list', () => {
+  it('should contains header and category list', () => {
     expect(page.getContainerChildren()).toBe(childrenNumber);
   });
 
-  xit('should display header Chuck Norris Jokes Generator', () => {
+  it('should display header Chuck Norris Jokes Generator', () => {
     expect(page.getHeaderText()).toEqual('Chuck Norris Jokes Generator');
   });
 
-  xit('should contains number of categories [capitalized]', () => {
+  it('should contains number of categories [capitalized]', () => {
     const categories = [
       'animal',
       'career',
@@ -43,7 +43,7 @@ describe('CategoryListComponent', () => {
     expect(page.getCategoryList()).toEqual(categories);
   });
 
-  xit('should redirect to different jokes/category location after clicked the button', () => {
+  it('should redirect to different jokes/category location after clicked the button', () => {
     const category = 'dev';
 
     expect(
